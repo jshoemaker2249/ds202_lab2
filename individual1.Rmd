@@ -1,0 +1,25 @@
+---
+title: "Lab 2 Question Set"
+author: "Jacob Shoemaker; jshoemaker2249"
+date: "February 5, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+choco <- read.csv("https://xdaiisu.github.io/ds202materials/hwlabs/choco.csv")
+head(choco)
+hist(choco$Rating, main= 'Histogram of Cholocate Ratings', xlab = 'Rating Value', ylab= 'Frequency')
+boxplot(choco$Rating, main='Boxplot of Chocolate Ratings', ylab="Rating Value")
+plot(choco$Cocoa.Pct, choco$Rating, xlab='Cacao Percentage', ylab='Chocolate Rating')
+```
+
+###Question 1
+There is a mostly normal distribution of the ratings data, perhaps a little right skew. As for outliers, the boxplot suggests there are 4.
+
+###Question 2
+There is a weak correlation between cacao percent and rating, as most of the chocolate is between 60 and 80 percent cacao, however the ratings are varied.
