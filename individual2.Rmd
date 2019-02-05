@@ -1,0 +1,30 @@
+---
+title: "lab2"
+author: "Qinwen Yang, AngelQinwe"
+date: "2/5/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+
+```{r}
+choco <- read.csv("https://xdaiisu.github.io/ds202materials/hwlabs/choco.csv")
+head(choco)
+hist(choco$Rating, xlab="rating", ylab = "frequency")
+boxplot(choco$Rating, main="boxplot for rating", ylab="Rating")
+plot(choco$Cocoa.Pct, choco$Rating, xlab = "Cocoa.Pct", ylab = "Rating")
+
+```
+Question1:
+This plot has little left skwed distribution, but mostly is standard normal distribution.
+
+
+Question 2:
+
+There are less correlation between Cocoa and rating, since the cocoa is crowd between 60-80 percent, but rating is varied differently.
+
