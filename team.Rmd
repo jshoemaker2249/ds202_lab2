@@ -1,6 +1,6 @@
 ---
 title: "team"
-author: "Jacob Shoemaker; jshoemaker2249"
+author: "Jacob Shoemaker, jshoemaker2249; Qinwen Yang; AngelQinwen"
 date: "February 7, 2019"
 output: html_document
 ---
@@ -24,5 +24,24 @@ nrow(choco)
 2. How does the number of ratings depend on the year? Draw a bar chart of the number of reports.
 
 ```{r}
+CountDate <- choco$Review.Date
+table(CountDate)
+barplot(table(CountDate))
+```
+3. How do ratings compare across different company locations? Focus on the three locations with the most ratings. (Hint: They are U.S.A., France, and Canada, but find them out using codes.)
+```{r}
+summary(choco$Company.Location)
+```
+4.
+Create own question and answer:
 
+#How many different companies located in France?
+
+
+```{r}
+OnlyFrance <- choco[(choco$Company.Location=="France"), ]
+summary(OnlyFrance$Company)
+UniqueCompany <- unique(OnlyFrance$Company)
+summary(UniqueCompany)
+length(UniqueCompany)
 ```
