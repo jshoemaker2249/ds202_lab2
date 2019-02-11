@@ -32,9 +32,11 @@ barplot(table(CountDate))
 
 3. How do ratings compare across different company locations? Focus on the three locations with the most ratings. (Hint: They are U.S.A., France, and Canada, but find them out using codes.)  
 ```{r}
-summary(choco$Company.Location)
+#summary(choco$Company.Location)
+loc <- sort(table(choco$Company.Location), decreasing = T)
+loc[1:3]
 ```
-Looking at the summary statistics, we can see that the US, France, and Canada have the greatest count of ratings.  
+Looking at these statistics, we can see that the US, France, and Canada have the greatest count of ratings.  
 
 4.Create own question and answer:  
 
